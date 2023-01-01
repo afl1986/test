@@ -4,6 +4,7 @@ import { Card } from './card.js'
 import { FlexRow, FlexCol, TwoColumnGrid } from './utils'
 import { SearchIcon } from '@heroicons/react/solid'
 import { Ratings } from '/src/card.js'
+import { AuthComponent } from '/src/features/Auth/components/AuthComponent.tsx'
 
 export var App = (props) => {
   return (
@@ -15,6 +16,15 @@ export var App = (props) => {
         gap: 8,
       }}
     >
+      <AuthComponent />
+      <img
+        style={{
+          width: 142,
+          height: 142,
+          contain: 'layout',
+        }}
+        src='/editor/icons/favicons/favicon-128.png?hash=v0.1.425'
+      />
       <span
         style={{
           fontSize: '40px',
@@ -69,6 +79,7 @@ export var App = (props) => {
               }}
             />
           </FlexRow>
+          <Card />
         </Card>
       </TwoColumnGrid>
     </FlexCol>

@@ -4,7 +4,12 @@ export function FlexRow({ children, style, ...props }) {
   return (
     <div
       {...props}
-      style={{ position: 'relative', display: 'flex', flexDirection: 'row', ...style }}
+      style={{
+        position: 'relative',
+        display: 'flex',
+        flexDirection: 'row',
+        ...style,
+      }}
     >
       {children}
     </div>
@@ -15,14 +20,23 @@ export function FlexCol({ children, style, ...props }) {
   return (
     <div
       {...props}
-      style={{ position: 'relative', display: 'flex', flexDirection: 'column', ...style }}
+      style={{
+        position: 'relative',
+        display: 'flex',
+        flexDirection: 'column',
+        ...style,
+      }}
     >
       {children}
     </div>
   )
 }
 
-export function TwoColumnGrid({ children, style, ...props }) {
+export function TwoColumnGrid({
+  children,
+  style,
+  ...props
+}) {
   return (
     <div
       {...props}
